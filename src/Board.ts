@@ -10,10 +10,10 @@ enum Grid {
 }
 
 export default class Board {
-  private tiles: Tile[][];
+  public tiles: Tile[][];
   private row: number;
   private column: number;
-  private mines: number;
+  public mines: number;
   private onFlag: (count: number) => void;
   private onFinish: (win: boolean) => void;
   public element: HTMLElement;
@@ -111,7 +111,7 @@ export default class Board {
     }
   }
 
-  private clickCell(cell: Cell) {
+  public clickCell(cell: Cell) {
     const { row, column } = cell;
     const tile = this.tiles[row][column];
     if (!tile.flagged) {
@@ -129,7 +129,7 @@ export default class Board {
     !tile.isMines() && this.checkWin();
   }
 
-  private flagCell(cell: Cell) {
+  public flagCell(cell: Cell) {
     const { row, column } = cell;
     const tile = this.tiles[row][column];
     if (tile.flagged) {

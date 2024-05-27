@@ -17,7 +17,7 @@ export default class Counter {
     return timer;
   }
 
-  protected set(value: string) {
+  public set(value: string) {
     this.element.innerText = value;
   }
 }

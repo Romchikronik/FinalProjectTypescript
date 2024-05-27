@@ -5,7 +5,7 @@ const colors: string[] = ['#4475A0', '#D75F35', '#C59C1F', '#5E9024', '#415B9F',
 export default class Tile {
   private label: string;
   private onclick: () => void;
-  private disabled: boolean;
+  public disabled: boolean;
   public element: HTMLButtonElement;
   public revealed: boolean;
   public flagged: boolean;
